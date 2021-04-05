@@ -13,10 +13,11 @@ export class ColorComponent implements OnInit {
   constructor(private colorService:ColorService) { }
 
   ngOnInit(): void {
+    this.getColors();
   }
 
   getColors(){
-    this.colorService.getColors().subscribe(response=>{
+    this.colorService.getColors().subscribe((response)=>{
       this.colors=response.data
     })
    }

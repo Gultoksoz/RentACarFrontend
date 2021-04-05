@@ -1,1 +1,10 @@
-<p>rental works!</p>
+<table class="table">
+    <thead><h4>RENTALS</h4></thead>
+    <tr *ngFor="let rentalsDetail of rentalsDetails">
+      <td>{{rentalsDetail.id}}</td>
+      <td>{{rentalsDetail.carName}}</td>
+      <td>{{rentalsDetail.customerName}}</td>
+      <td>{{rentalsDetail.rentDate | date: 'yyyy/MM/dd'}}</td>
+      <td>{{rentalsDetail.returnDate | date: 'yyyy/MM/dd'}}</td>
+    </tr>
+  </table>
